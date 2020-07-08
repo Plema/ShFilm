@@ -32,11 +32,10 @@ $(document).ready(function () {
     } );
 
     $('.promo_slider').slick({
-        infinite: false,
+        infinite:false,
         draggable:true,
         slidesToShow: 8,
         slidesToScroll: 1,
-        speed:300,
         dots: true,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
@@ -92,11 +91,13 @@ $(document).ready(function () {
     });
 
     $('.slider_content').slick({
-        infinite: false,
         draggable:true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed:300,
+        infinite:true,
+        autoplay: true,
+
+        autoplaySpeed: 2000,
         dots: true,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
@@ -104,11 +105,12 @@ $(document).ready(function () {
     });
 
     $('.project_slider').slick({
-        infinite: false,
+        infinite:true,
         draggable:true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        speed:300,
+        autoplay: true,
+        autoplaySpeed: 2000,
         dots: false,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
@@ -162,12 +164,13 @@ $(document).ready(function () {
     });
 
     $('.reviews_slider').slick({
-        infinite: false,
+        infinite:true,
         draggable:true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        speed:300,
         dots: false,
+        autoplaySpeed: 2000,
+        autoplay: true,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
         responsive: [
@@ -360,5 +363,16 @@ $(document).ready(function () {
     }
 
 
+
+    //var target = $('#an_t');
+    //var targetPos = target.offset().top;
+    //var winHeight = $(window).height();
+    //var scrollToElem = targetPos - winHeight;
+    //$(window).scroll(function(){
+    //    var winScrollTop = $(this).scrollTop();
+    //    if(winScrollTop > scrollToElem){
+    //        $( ".box" ).css( "display", "block" );
+    //    }
+    //});
 
 });

@@ -620,6 +620,7 @@ h4 {
             }
             .box{
                 min-height: 425px;
+
                 &:before{
                     content: '';
                     background: url("../img/fon.png");
@@ -665,7 +666,16 @@ h4 {
                         width: 184px;
                         height: 162px;
                     }
-                    p{
+                    &:after{
+                        position: absolute;
+                        top: 66px;
+                        left: 12px;
+                        width: 3px;
+                        height: 18px;
+                        content: '';
+                        background-color: #edb9a3;
+                    }
+                    .animate{
                         font-family: 'Playfair Display';
                         font-size: 25px;
                         font-weight: 700;
@@ -674,15 +684,8 @@ h4 {
                         z-index: 2;
                         color: #fff;
                         padding: 0 6px 0 25px;
-                        &:before{
-                            position: absolute;
-                            top: 7px;
-                            left: 0;
-                            width: 3px;
-                            height: 18px;
-                            content: '';
-                            background-color: #edb9a3;
-                        }
+
+
                     }
                 }
                 img{
@@ -1222,7 +1225,12 @@ h4 {
                 transition: 0.5s;
                 cursor: pointer;
                 &:hover{
-                    color: #c39c6c;
+                    color: #191919;
+                    font-family: 'Montserrat-Bold';
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-decoration: underline;
+                    transition: 0.5s;
                 }
             }
         }
@@ -1259,6 +1267,16 @@ h4 {
                         position: absolute;
                         right: 13px;
                         bottom: -6px;
+                        transition: 0.5s;
+                        cursor: pointer;
+                        &:hover{
+                            color: #191919;
+                            font-family: 'Montserrat-Bold';
+                            font-size: 16px;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            transition: 0.5s;
+                        }
                     }
 
                 }
@@ -1296,6 +1314,13 @@ h4 {
                     padding: 18px 0 23px 78px;
                     letter-spacing: .6px;
                     color: #000;
+                    cursor: default;
+                    transition: 0.5s;
+                    display: inline-block;
+                    &:hover{
+                        text-decoration: underline;
+                        transition: 0.5s;
+                    }
                     &.ui-state-active{
                         padding: 10px 0 8px 124px;
                         &:before{
@@ -1376,6 +1401,12 @@ h4 {
                 line-height: 28px;
                 position: relative;
                 padding: 5px 57px 0 0;
+                cursor: pointer;
+                &:hover{
+                    color: #191919;
+                    text-decoration: underline;
+
+                }
                 i{
                     position: absolute;
                     right: -3px;
@@ -1740,6 +1771,10 @@ footer{
                         padding: 100px 130px 30px 0;
                         &:before{
                             top: 90px;
+                        }
+                        &:after{
+                            top: 104px;
+                            left: -8px;
                         }
                     }
                     img{
@@ -2165,6 +2200,11 @@ footer{
                             top: 153px;
                             left: 13px;
                         }
+                        &:after{
+                            top: 178px;
+                            left: 9px;
+
+                        }
                         p{
                             font-size: 30px;
                             width: 51%;
@@ -2330,6 +2370,8 @@ footer{
             .container{
                 .box{
                     padding: 150px 0 0;
+                    position: relative;
+
                     img{
                         top: 44px;
                         left: 15px;
@@ -2367,6 +2409,7 @@ footer{
         }
         .section_6{
             padding: 0 0 98px;
+            overflow: inherit;
             .container{
                 h3{
                     padding: 0px 0 0 8px;
@@ -2386,6 +2429,26 @@ footer{
                     position: relative;
                     flex-wrap: wrap;
                     padding: 120px 0 0;
+                    &:before{
+                        position: absolute;
+                        top: -97px;
+                        right: 39%;
+                        width: 2px;
+                        height: 132px;
+                        content: '';
+                        background-color: #cacaca;
+                        transform: translate(0px, 2px);
+                    }
+                    &:after{
+                        position: absolute;
+                        top: 18px;
+                        right: 39%;
+                        width: 4px;
+                        height: 18px;
+                        content: '';
+                        background-color: #c39c6c;
+                        transform: translate(1px, 0px);
+                    }
                     .project_filter{
                         width: 100%;
                         .filter{
@@ -2405,6 +2468,19 @@ footer{
                                        font-family: 'Montserrat-Regular';
                                        font-size: 19px;
                                        font-weight: 400;
+                                       position: relative;
+                                       &:after{
+                                           position: absolute;
+                                           left: 0;
+                                           width: 0px;
+                                           height: 9px;
+                                           content: '';
+                                           background-color: #c39c6c;
+                                           top: 9px;
+                                           z-index: -1;
+                                           transition: width 0.3s ease-out; /*задаём время анимации*/
+
+                                       }
                                    }
                                     &.active{
 
@@ -2423,6 +2499,8 @@ footer{
                                                 background-color: #c39c6c;
                                                 top: 9px;
                                                 z-index: -1;
+                                                transition: width 0.3s ease-out; /*задаём время анимации*/
+
                                             }
                                         }
                                     }
@@ -2493,7 +2571,37 @@ footer{
         }
         .section_7{
             padding: 40px 0 40px;
+            &:before{
+                position: absolute;
+                top: 0px;
+                left:26%;
+                width: 2px;
+                height: 132px;
+                content: '';
+                background-color: #cacaca;
+                transform: translate(0px, 0px);
+            }
+            &:after{
+                position: absolute;
+                top: 127px;
+                left: 26%;
+                width: 4px;
+                height: 18px;
+                content: '';
+                background-color: #c39c6c;
+                transform: translate(-1px, 0px);
+            }
             .container{
+                &:before{
+                    position: absolute;
+                    right: 0%;
+                    bottom: -71px;
+                    width: 2px;
+                    height: 152px;
+                    content: '';
+                    transform: translate(-25px,0);
+                    background-color: #cacaca;
+                }
                 h3{
                     padding: 2px 55px 10px 73px;
                     letter-spacing: 1.55px;
@@ -2856,6 +2964,10 @@ footer{
                     }
                     .text{
                         padding: 177px 130px 30px 41px;
+                        &:after{
+                            top: 182px;
+                            left: 30px;
+                        }
                         p{
                             font-size: 30px;
                             width: 51%;
